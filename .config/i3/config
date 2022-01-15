@@ -253,8 +253,10 @@ bindsym $mod+r mode "resize"
 # Lock Screen
 bindsym $mod+Shift+x exec i3lock
 
+# Shutdown
+bindsym $mod+Shift+s exec systemctl poweroff
+
 # Font Awesome Icons
 #                                                                                                                                                                         
 
-exec --no-startup-id xset +fp /home/undefined/.local/share/fonts
-exec xset fp rehash
+

@@ -1,9 +1,9 @@
 ### Todos
 
-- [] Zathura needs work
-- [] Ranger needs work
-- [] Gotop needs work
-- [] Alacritty needs work
+- [ ] Zathura needs work
+- [ ] Ranger needs work
+- [ ] Gotop needs work
+- [ ] Alacritty needs work
 - [x] Nvim config
 - [x] Lvim config
 - [x] Dunst config

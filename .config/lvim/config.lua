@@ -27,6 +27,7 @@ require('plug-settings.telescope')
 
 -- Graphql Settings
 require('lsp.graphql')
+require('lsp.shopify')
 
 -- Emmet Ls Settings
 require('plug-settings.emmet')

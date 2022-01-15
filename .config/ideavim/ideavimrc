@@ -1,0 +1,4 @@
+set ideajoin = true
+set relativenumber
+inoremap jk <Esc>
+set ideaput = true

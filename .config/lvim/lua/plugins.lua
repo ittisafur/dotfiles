@@ -1,8 +1,4 @@
 lvim.plugins = {
-  -- Eth Solidiy
-  {
-    "ChristianChiarulli/vim-solidity"
-  },
   {
     "mattn/emmet-vim",
   },

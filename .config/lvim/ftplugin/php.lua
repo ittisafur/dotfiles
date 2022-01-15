@@ -5,6 +5,9 @@ formatters.setup {
       exe = "phpcbf",
       args = { "--standard=PSR12", "-q", "-" },
       stdout = true,
+    },
+    {
+      exe = "prettier",
     }
 }
 
