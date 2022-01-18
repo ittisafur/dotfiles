@@ -7,7 +7,7 @@
 local theme_check_config = {
   cmd = { "theme-check-language-server", "--stdio" },
   filetypes = { "liquid" },
-  root_dir = require 'lspconfig.util'.root_pattern(".git"),
+  root_dir = require 'lspconfig.util'.root_pattern(".theme-check.yml"),
   settings = {}
 }
 require("lvim.lsp.manager").setup("theme_check", theme_check_config)
