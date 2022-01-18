@@ -2,7 +2,7 @@
 
 - [ ] Zathura needs work
 - [ ] Ranger needs work
-- [ ] Gotop needs work
+- [x] Gotop needs work
 - [ ] Alacritty needs work
 - [x] Nvim config
 - [x] Lvim config
