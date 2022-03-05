@@ -6,15 +6,19 @@ lvim.builtin.lualine.style = "lvim"
 -- Show dot files in NvimTree
 lvim.builtin.nvimtree.hide_dotfiles = 0
 
+-- D
 lvim.builtin.dap.active = true
 
--- general
+
+-- general --
+
+lvim.builtin.bufferline.active = true
 -- lvim.log.level = false -- Turn to "debug" while debugging
-lvim.debug = false
+lvim.debug = true
 lvim.format_on_save = true
 
 vim.opt.wrap = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.numberwidth = 6
 
 

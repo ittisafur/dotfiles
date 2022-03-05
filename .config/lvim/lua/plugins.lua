@@ -5,12 +5,13 @@ lvim.plugins = {
   {
     "mg979/vim-visual-multi"
   },
-  {
-    "tzachar/cmp-tabnine",
-    run = "./install.sh",
-    requires = "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-  },
+{"tomlion/vim-solidity"},
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   run = "./install.sh",
+  --   requires = "hrsh7th/nvim-cmp",
+  --   event = "InsertEnter",
+  -- },
   {
     "github/copilot.vim"
   },
