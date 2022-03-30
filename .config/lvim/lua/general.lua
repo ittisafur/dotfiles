@@ -18,7 +18,7 @@ lvim.debug = true
 lvim.format_on_save = true
 
 vim.opt.wrap = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.numberwidth = 6
 
 
@@ -31,8 +31,11 @@ lvim.transparent_window = true
 
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+-- lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
+lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
+
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 

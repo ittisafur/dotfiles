@@ -1,4 +1,4 @@
-vim.opt.guifont = "Bergen Mono Bold:h10"
+vim.opt.guifont = "MonoLisa:h10"
 -- vim.opt.guifont = "Roboto Mono Bold:h10"
 -- vim.opt.guifont = "Pine:h10"
 

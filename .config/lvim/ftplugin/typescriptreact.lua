@@ -3,6 +3,6 @@ formatters.setup {
   {
     exe = "prettier",
     filetypes = { "typescriptreact" },
-    args = { "--single-quote", "--jsx-single-quote" },
+    -- args = { "--single-quote", "--jsx-single-quote" },
   },
 }
