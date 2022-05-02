@@ -1,11 +1,11 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 
 formatters.setup {
-    {
-      exe = "phpcbf",
-      args = { "--standard=PSR12", "-q", "-" },
-      stdout = true,
-    },
+  {
+    exe = "phpcbf",
+    args = { "--standard=PSR12", "-q", "-" },
+    stdout = true,
+  },
     {
       exe = "prettier",
     }
@@ -16,3 +16,5 @@ vim.opt.expandtab = true -- convert tabs to spaces
 -- PSR-12 Coding Style
 vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 4 -- insert 2 spaces for a tab
+
+
