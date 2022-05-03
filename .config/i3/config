@@ -178,8 +178,10 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 # bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Forcing Application to be on Specific Workspace
+# use `xprop WM_CLASS` to identify the application
 assign [class="Google-chrome"] $ws1
-assign [class="neovide"] $ws2
+# Assign Neovide on $ws2
+# assign [class="neovide"] $ws2
 # assign [class="Gnome-terminal"] $ws3
 # assign [class="Element"] $ws4 
 # assign [class="Caprine"] $ws4 
@@ -263,7 +265,6 @@ bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move
 for_window [instance="dropdown"] floating enable 
 for_window [instance="dropdown"] resize set width 625 400
 for_window [instance="dropdown"] move scratchpad
-
 
 
 exec --no-startup-id kitty --name dropdown

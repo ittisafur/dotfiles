@@ -6,11 +6,8 @@ lvim.builtin.lualine.style = "lvim"
 -- Show dot files in NvimTree
 lvim.builtin.nvimtree.hide_dotfiles = 0
 
--- D
-lvim.builtin.dap.active = true
 
-
--- general --
+-- General --
 
 lvim.builtin.bufferline.active = true
 -- lvim.log.level = false -- Turn to "debug" while debugging
@@ -25,17 +22,12 @@ vim.opt.numberwidth = 6
 vim.opt.mouse = "a"
 vim.opt.foldmethod = "manual" -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = ""
+vim.opt.termguicolors = true
 
 -- Transparent
 lvim.transparent_window = true
 
-
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
--- lvim.builtin.dashboard.active = true
-lvim.builtin.alpha.active = true
--- lvim.builtin.notify.active = true
-lvim.builtin.terminal.active = true
-
+-- NvimTree
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 

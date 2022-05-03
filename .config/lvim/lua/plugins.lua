@@ -5,13 +5,6 @@ lvim.plugins = {
   {
     "mg979/vim-visual-multi"
   },
-{"tomlion/vim-solidity"},
-  -- {
-  --   "tzachar/cmp-tabnine",
-  --   run = "./install.sh",
-  --   requires = "hrsh7th/nvim-cmp",
-  --   event = "InsertEnter",
-  -- },
   {
     "github/copilot.vim"
   },
@@ -24,6 +17,7 @@ lvim.plugins = {
   },
   {
     "folke/trouble.nvim",
+     requires = "kyazdani42/nvim-web-devicons",
      cmd = "TroubleToggle",
   },
   {
@@ -41,10 +35,11 @@ lvim.plugins = {
   },
   {
     "f-person/git-blame.nvim",
+    event = "BufRead",
     config = function()
-      vim.g.gitblame_message_template ='<summary> • <date> • <author>'
-      vim.g.gitblame_enabled = 0
-      vim.g.gitblame_highlight_group = 'LineNr'
+      vim.g.gitblame_message_template ='• <summary> • <date> • <author>'
+      vim.g.gitblame_enabled = 1
+      vim.g.gitblame_highlight_group = 'gitblame'
     end,
   },
   {
@@ -137,3 +132,7 @@ lvim.plugins = {
     event = "BufRead"
   }
 }
+
+lvim.builtin.alpha.active = true -- Enable alpha mode
+lvim.builtin.dap.active = true -- Debug Adapter Protocol
+lvim.builtin.terminal.active = true -- Terminal

@@ -1,12 +1,22 @@
-- [ ] Which Key fix needed ( WIP )
-- [ ] Add Blade Vim
-- [ ] Add Spectre Vim and configure
+#### Done Tasks
+
 - [x] Add Zen Mode
-- [ ] Add Zen Mode configures
-- [ ] Some More Color Schemes
 - [x] Add Todo Comments
 - [x] Fix Lualine according to preference
 - [x] Add JSDoc and PHP Doc Modded
+
+#### Pending Tasks
+
+- [ ] Which Key fix needed ( WIP )
+- [ ] Add Blade Vim
+- [ ] Add Spectre Vim and configure
+- [ ] Add Zen Mode configurations
+- [ ] Some More Color Schemes
+- [ ] Learn About Plugins
+- [ ] Change `lvim.lsp.override` to `lvim.lsp.automatic_configuration.skipped_servers`
+- [ ] Move everything from `plug-settings` to `plugin-configurations`
+- [ ] Setup Markdown properly
+- [ ] Organize Everything
 
 ### Color Schemes
 

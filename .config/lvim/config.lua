@@ -1,15 +1,17 @@
 -- General Settings
 require('general')
 
--- Gui Settings
-require('gui.gui-general')
-
--- Dashboard Settings
-require('plug-settings.dashboard')
-
 -- ColorScheme
 -- require('themes.tokyonight')
 require('themes.nord')
+
+-- Gui Settings
+if require('themes.nord') then
+  require('gui.gui-general')
+end
+
+-- Dashboard Settings
+require('plug-settings.dashboard')
 
 -- Treesitter
 require('treesitters')
