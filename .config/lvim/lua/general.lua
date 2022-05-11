@@ -12,7 +12,7 @@ lvim.builtin.nvimtree.hide_dotfiles = 0
 lvim.builtin.bufferline.active = true
 -- lvim.log.level = false -- Turn to "debug" while debugging
 lvim.debug = true
-lvim.format_on_save = true
+lvim.format_on_save = false
 
 vim.opt.wrap = true
 vim.opt.relativenumber = true
@@ -30,6 +30,3 @@ lvim.transparent_window = true
 -- NvimTree
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
-
-
-
