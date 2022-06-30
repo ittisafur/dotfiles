@@ -186,6 +186,7 @@ assign [class="Google-chrome"] $ws1
 # assign [class="Element"] $ws4 
 # assign [class="Caprine"] $ws4 
 assign [class="Mailspring"] $ws5
+assign [class="notion-app-enhanced"] $ws6
 assign [class="Spotify"] $ws6
 
 
@@ -193,7 +194,7 @@ assign [class="Spotify"] $ws6
 bindsym Control+q exec flameshot gui
 # i3 startup applications
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-scale ~/Pictures/Wallpapers/gnu-solarized.png
+exec_always feh --bg-scale ~/Pictures/Wallpapers/burningmidnight2.png #https://www.behance.net/gallery/112645653/Burning-Midnight
 exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.conf #Picom is a compositor for X11
 exec --no-startup-id dunst
 # exec --no-startup-id polybar
@@ -202,7 +203,7 @@ exec google-chrome # Google Chrome
 # exec --no-startup-id element-desktop # Element
 # exec caprine # Caprine
 exec mailspring #Mailspring
-# exec spotify #Spotify
+exec_always --no-startup-id notion-app-enhanced #Mailspring
 # exec --no-startup-id pasystray #System tray
 
 

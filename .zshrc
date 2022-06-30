@@ -66,6 +66,9 @@ codi() {
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Go lang
+export PATH="$HOME/go/bin:$PATH"
+
 # Composer PHP
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH=~/.local/bin:$PATH

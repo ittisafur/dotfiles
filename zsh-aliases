@@ -6,16 +6,28 @@ alias Transcend="cd /media/undefined/Transcend"
 alias Works="cd /media/undefined/Works"
 alias Nexify="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React/practice/nexify/"
 alias Techdiary="cd /media/undefined/Works/Codes\ and\ Projects/Open\ Source/kingRayhan/Tech\ Diary/"
+alias Node="cd /media/undefined/Works/Codes\ and\ Projects/Node"
 alias Pwebsite="cd /media/undefined/Works/Codes\ and\ Projects/Personal/ittisafur.com/"
+alias Jpegdegens="cd /media/undefined/Works/Codes\ and\ Projects/Blockchain/FEM\ -\ Blockchain/jpegdegens/"
+alias TypeScript="cd /media/undefined/Works/Codes\ and\ Projects/TypeScript/"
+alias Laravel="cd /media/undefined/Works/Codes\ and\ Projects/Laravel"
+alias Shopify="cd /media/undefined/Works/Codes\ and\ Projects/Shopify/"
 alias Streetlife="cd /media/undefined/Works/Clients/fiverr/streetlifelabs/landing/"
 alias Raush="cd /media/undefined/Works/Clients/Raush/landing/"
-alias Rental="cd /media/undefined/Works/Clients/DipRaihan/rental-client/"
 alias Protoconn="cd /media/undefined/Works/Clients/Protoconn/webapp/"
 alias Chriss="cd /media/undefined/Works/Clients/chriss/banana-club/"
+alias Lasogette="cd /media/undefined/Works/Clients/Bloopy/dama/lasogette/"
 alias NodeJonas="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/Node/Jonas"
 alias Ytp="pipe-viewer -n --no-video --player=mpvt"
 
 
 # Manage dotfiles
-alias Dfs=$HOME/dotfiles/
+alias DFS=$HOME/dotfiles/
+
+# Lvim configuration
+alias lvimrc="lvim $HOME/.config/lvim/config.lua"
+# Nvim configuration
+
+# Update and Upgrade Packages
+alias upupgrade="sudo apt-get update && sudo apt-get upgrade"
 

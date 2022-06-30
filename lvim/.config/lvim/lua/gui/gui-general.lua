@@ -1,6 +1,5 @@
 vim.o.guifont = "MonoLisa:h9:antialias=true:autocmd=false"
 vim.o.emoji_font = "MonoLisa:h9:antialias=true:autocmd=false"
-vim.o.background = "dark"
 vim.g.colors_name = "nord"
 
 -- vim.opt.guifont = "Roboto Mono Bold:h10"

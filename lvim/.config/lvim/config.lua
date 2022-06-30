@@ -1,4 +1,5 @@
 -- General Settings
+
 require('general')
 
 -- ColorScheme
@@ -39,7 +40,7 @@ require('plug-settings.tailwindcss')
 
 
 -- Autocommands
-require('autocommands').config()
+require('autocommands')
 -- Which Keys
 require('plug-settings.whichkey')
 

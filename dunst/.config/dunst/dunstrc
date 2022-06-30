@@ -1,3 +1,4 @@
+
 # See dunst(5) for all configuration options
 
 [global]
@@ -17,7 +18,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = none
+    follow = mouse
 
     ### Geometry ###
 
@@ -151,7 +152,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "<b>%a</b>\n<b>%s</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -313,9 +314,9 @@
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
 
-# [play_sound]
-#     summary = "*"
-#     script = ~/dotfiles/.config/dunst/notify.sh
+[play_sound]
+    summary = "*"
+    script = ~/.local/bin/notify
 
 # [espeak]
 #     summary = "*"

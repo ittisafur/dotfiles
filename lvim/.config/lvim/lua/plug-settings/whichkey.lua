@@ -21,7 +21,7 @@ lvim.builtin.which_key.mappings["z"] = {
   m = {"<cmd>ZenMode<cr>", "zen mode"}
 }
 
--- Copy Line 
+-- Copilot
 lvim.builtin.which_key.mappings["C"] = {
   name = "Copilot",
   e = {"<cmd>Copilot enable<cr>", "Enable Copilot"},

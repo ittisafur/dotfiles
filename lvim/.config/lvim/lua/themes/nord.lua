@@ -6,5 +6,6 @@ lvim.colorscheme = "nord"
 vim.g.nord_disable_background = false
 vim.g.colors_name = "nord"
 
+
 -- Lualine
 lvim.builtin.lualine.options.theme= "nord"

@@ -1,13 +1,53 @@
 lvim.plugins = {
   {
+    "nvim-treesitter/nvim-tree-docs",
+    config = function ()
+     require "nvim-treesitter.configs".setup{
+        tree_docs = {
+          enable = true,
+        }
+      }
+    end
+  },
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    config = function ()
+     -- This is your opts table
+      require("telescope").setup {
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+              -- even more opts
+            }
+          }
+        }
+      }
+      -- To get ui-select loaded and working with telescope, you need to call
+      -- load_extension, somewhere after setup function:
+      require("telescope").load_extension("ui-select")
+    end
+  },
+  -- Folding plugin
+  {
+    "anuvyklack/pretty-fold.nvim",
+    config = function()
+      require('pretty-fold').setup()
+      require('pretty-fold.preview').setup()
+     end
+  },
+  -- Emmet Extention for Vim
+  {
     "mattn/emmet-vim",
   },
+  -- Forgot what this does
   {
     "mg979/vim-visual-multi"
   },
+  -- Cheat as a dev plugin :)
   {
     "github/copilot.vim"
   },
+  -- Basically shows definitions of functions and variables. Donno much
   {
     "ray-x/lsp_signature.nvim",
     event = "InsertEnter",
@@ -15,11 +55,13 @@ lvim.plugins = {
       require("lsp_signature").on_attach()
     end
   },
+  -- Docs Suggested so yea. Need to look into it
   {
     "folke/trouble.nvim",
      requires = "kyazdani42/nvim-web-devicons",
      cmd = "TroubleToggle",
   },
+  -- JSDOC for Js and Ts
   {
     "heavenshell/vim-jsdoc",
   },
