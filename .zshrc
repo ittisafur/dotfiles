@@ -73,6 +73,10 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH=~/.local/bin:$PATH
 
+# Flutter
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
 # Ptsh Start
 # alias ls="ptls"
 # alias pwd="ptpwd"
@@ -139,3 +143,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun completions
+[ -s "/home/undefined/.bun/_bun" ] && source "/home/undefined/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/home/undefined/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/undefined/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

@@ -192,7 +192,7 @@ assign [class="Spotify"] $ws6
 
 # Keybindings
 bindsym Control+q exec flameshot gui
-# i3 startup applications
+# i3 Startup Applications
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-scale ~/Pictures/Wallpapers/burningmidnight2.png #https://www.behance.net/gallery/112645653/Burning-Midnight
 exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.conf #Picom is a compositor for X11
@@ -204,8 +204,17 @@ exec google-chrome # Google Chrome
 # exec caprine # Caprine
 exec mailspring #Mailspring
 exec_always --no-startup-id notion-app-enhanced #Mailspring
+# exec --no-startup-id xrandr --output VGA-0 --auto --right-of HDMI-0 &
+# exec --no-startup-id xrandr --output DVI-D-0 --auto --right-of HDMI-A-0 &
 # exec --no-startup-id pasystray #System tray
 
+
+# workspace 1 output HDMI-A-0
+# workspace 2 output HDMI-A-0
+# workspace 3 output HDMI-A-0
+# workspace 4 output HDMI-A-0
+# workspace 5 output DVI-D-0
+# workspace 6 output DVI-D-0
 
 
 # reload the configuration file
@@ -271,6 +280,9 @@ for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id kitty --name dropdown
 # Android emulator
 for_window [title="^Android Emulator*"] floating enable
+
+# Upwork
+for_window [title="^Upwork*"] floating enable
 
 
 

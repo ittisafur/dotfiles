@@ -1,15 +1,15 @@
 -- General Settings
-
 require('general')
 
 -- ColorScheme
--- require('themes.tokyonight')
-require('themes.nord')
+require('themes.poimandres'); -- Nord, Tokyonight, Rose Pine, Poimandres
 
 -- Gui Settings
-if require('themes.nord') then
+if lvim.colorscheme == 'nord' then
   require('gui.gui-general')
 end
+
+require('gui.gui-general')
 
 -- Dashboard Settings
 require('plug-settings.dashboard')
@@ -29,8 +29,9 @@ require('plug-settings.copilot')
 require('plug-settings.telescope')
 
 -- Graphql Settings
-require('lsp.graphql')
+-- require('lsp.graphql')
 require('lsp.shopify')
+require('lsp-config.markdown')
 
 -- Emmet Ls Settings
 require('plug-settings.emmet')

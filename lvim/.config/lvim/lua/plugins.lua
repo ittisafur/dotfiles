@@ -1,4 +1,31 @@
 lvim.plugins = {
+  {"anuvyklack/keymap-amend.nvim"},
+  -- Search and replace across the project
+  {
+    'windwp/nvim-spectre'
+  },
+  {
+    "tpope/vim-fugitive",
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "GMove",
+      "GDelete",
+      "GBrowse",
+      "GRemove",
+      "GRename",
+      "Glgrep",
+      "Gedit"
+    },
+    ft = {"fugitive"}
+  },
+  {
+    'olivercederborg/poimandres.nvim',
+  },
   {
     "nvim-treesitter/nvim-tree-docs",
     config = function ()

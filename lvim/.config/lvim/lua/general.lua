@@ -7,6 +7,7 @@ lvim.builtin.lualine.style = "lvim"
 lvim.builtin.nvimtree.hide_dotfiles = 0
 
 
+
 -- General --
 
 lvim.builtin.bufferline.active = true
