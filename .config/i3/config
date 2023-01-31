@@ -194,7 +194,8 @@ assign [class="Spotify"] $ws6
 bindsym Control+q exec flameshot gui
 # i3 Startup Applications
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-scale ~/Pictures/Wallpapers/burningmidnight2.png #https://www.behance.net/gallery/112645653/Burning-Midnight
+# exec_always feh --bg-scale ~/Pictures/Wallpapers/burningmidnight2.png #https://www.behance.net/gallery/112645653/Burning-Midnight
+exec_always feh --bg-scale ~/Pictures/Wallpapers/skull_wallpaper.jpg
 exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.conf #Picom is a compositor for X11
 exec --no-startup-id dunst
 # exec --no-startup-id polybar
@@ -283,6 +284,10 @@ for_window [title="^Android Emulator*"] floating enable
 
 # Upwork
 for_window [title="^Upwork*"] floating enable
+
+# Megasync
+for_window [title="^megasync*"] floating enable
+for_window [title="^Megasync*"] floating enable
 
 
 

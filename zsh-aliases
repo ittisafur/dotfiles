@@ -23,8 +23,9 @@ alias Protoconn="cd /media/undefined/Works/Clients/Protoconn/webapp/"
 alias Chriss="cd /media/undefined/Works/Clients/chriss/banana-club/"
 alias Lasogette="cd /media/undefined/Works/Clients/Bloopy/dama/lasogette/"
 alias Neudevinc="cd /media/undefined/Works/Clients/Neudevinc/Recast/"
-alias Kanarys="cd ~/Works/Kanarys/kanarys-platform/"
-alias NodeJonas="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/Node/Jonas"
+alias Recast="cd /media/undefined/Works/Clients/Recast/Recast/"
+alias Kanarys="cd ~/Works/Kanarys/"
+alias NodeJonas="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/Node/jonas"
 alias React="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React"
 alias Wordpress="cd /media/undefined/Works/Codes\ and\ Projects/Wordpress"
 alias Ytp="pipe-viewer -n --no-video --player=mpvt"
@@ -35,6 +36,7 @@ alias DFS=$HOME/dotfiles/
 
 # Lvim configuration
 alias lvimrc="lvim $HOME/.config/lvim/config.lua"
+
 # Nvim configuration
 
 # Update and Upgrade Packages
