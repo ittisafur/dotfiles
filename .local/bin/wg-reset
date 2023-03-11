@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo wg-quick down wg0
+systemd-resolve --interface enp24s0 --set-dns 1.1.1.1
+sudo service systemd-resolved restart

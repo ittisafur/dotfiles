@@ -22,9 +22,6 @@ function zsh_add_file() {
     [ -f "$HOME/$1" ] && source "$HOME/$1"
 }
 
-# Add Aliases
-zsh_add_file "zsh-aliases"
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -88,7 +85,7 @@ alias touch="pttouch"
 # Moving cat with bat
 if [ "$(command -v bat)" ]; then
   unalias -m 'cat'
-  alias cat='bat --theme="gruvbox-dark"'
+  alias cat='bat --theme="nord"'
 fi
 # Moving cat with bat End
 
@@ -155,3 +152,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PNPM_HOME="/home/undefined/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Add Aliases
+zsh_add_file "zsh-aliases"
+
+# Add Functions
+zsh_add_file "zsh-functions"
