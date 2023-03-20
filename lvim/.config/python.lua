@@ -1,0 +1,1 @@
+lvim/ftplugin/python.lua

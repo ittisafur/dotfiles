@@ -1,0 +1,1 @@
+lvim/ftplugin/vue.lua

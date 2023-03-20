@@ -199,6 +199,14 @@ lvim.plugins = {
     "tpope/vim-surround",
     keys = {"c", "d", "y"},
     event = "BufRead"
+  },
+  {
+    "lumiliet/vim-twig",
+    ft = {"twig"}
+  },
+{
+    "othree/html5.vim",
+    ft = {"html", "twig"}
   }
 }
 

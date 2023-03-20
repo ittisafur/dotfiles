@@ -37,3 +37,7 @@ lvim.transparent_window = true
 -- NvimTree
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
+
+-- Format on save
+lvim.format_on_save = true
+
