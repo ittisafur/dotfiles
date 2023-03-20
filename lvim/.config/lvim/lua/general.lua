@@ -6,6 +6,12 @@ lvim.builtin.lualine.style = "lvim"
 -- Show dot files in NvimTree
 lvim.builtin.nvimtree.hide_dotfiles = 0
 
+-- Fold method
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
+
+
 
 
 -- General --

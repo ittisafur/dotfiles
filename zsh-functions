@@ -1,4 +1,4 @@
 # GH create PR with args
-ghpr() {
+function ghpr() {
   gh pr create --title "$1" --base "$2"
 }
