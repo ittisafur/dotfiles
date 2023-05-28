@@ -206,16 +206,16 @@ exec google-chrome # Google Chrome
 exec mailspring #Mailspring
 exec_always --no-startup-id notion-app-enhanced #Mailspring
 # exec --no-startup-id xrandr --output VGA-0 --auto --right-of HDMI-0 &
-# exec --no-startup-id xrandr --output DVI-D-0 --auto --right-of HDMI-A-0 &
+exec --no-startup-id xrandr --output DVI-D-0 --auto --right-of HDMI-A-0 &
 # exec --no-startup-id pasystray #System tray
 
 
-# workspace 1 output HDMI-A-0
-# workspace 2 output HDMI-A-0
-# workspace 3 output HDMI-A-0
-# workspace 4 output HDMI-A-0
-# workspace 5 output DVI-D-0
-# workspace 6 output DVI-D-0
+workspace 1 output HDMI-A-0
+workspace 2 output HDMI-A-0
+workspace 3 output HDMI-A-0
+workspace 4 output HDMI-A-0
+workspace 5 output DVI-D-0
+workspace 6 output DVI-D-0
 
 
 # reload the configuration file

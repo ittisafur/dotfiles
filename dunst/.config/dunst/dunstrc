@@ -319,6 +319,11 @@
     summary = "*"
     script = ~/.local/bin/notify
 
+[watch]
+interval = 60
+command = ~/local/bin/cputempthreshold
+timeout = 
+
 # [espeak]
 #     summary = "*"
 #     script = ~/dotfiles/.config/dunst/notify.sh

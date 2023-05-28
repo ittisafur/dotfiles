@@ -2,3 +2,22 @@
 function ghpr() {
   gh pr create --title "$1" --base "$2"
 }
+
+# exa function unalias ls
+# function ls() {
+#   if [ "$(command -v exa)" ]; then
+#     unalias -m 'ls'
+#     exa --color=always -group-directories-first --header --icons 
+#   fi
+# }
+
+
+# color ls config
+function ls() {
+ if [ "$(command -v colorls)" ]; then
+   unalias -m 'ls'
+   alias ls='colorls $1'
+ fi
+}
+# color ls config End
+

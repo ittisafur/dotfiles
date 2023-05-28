@@ -29,6 +29,7 @@ alias NodeJonas="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/Node/
 alias React="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React"
 alias Wordpress="cd /media/undefined/Works/Codes\ and\ Projects/Wordpress"
 alias Ytp="pipe-viewer -n --no-video --player=mpvt"
+alias Templates="cd /media/undefined/Works/Templates"
 
 
 # Manage dotfiles

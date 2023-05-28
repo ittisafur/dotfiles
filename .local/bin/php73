@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo update-alternatives --set php /usr/bin/php7.3
+sudo update-alternatives --set php /usr/bin/php7.4
 sudo a2dismod php8.0
 sudo systemctl restart apache2
-sudo a2enmod php7.3
+sudo a2enmod php7.4
 sudo systemctl restart apache2
 sudo a2dissite kanarys-cms.conf kanarys-new-apiserver.conf
 sudo systemctl reload apache2

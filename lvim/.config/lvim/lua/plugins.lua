@@ -1,4 +1,10 @@
 lvim.plugins = {
+  -- Testin Starts
+    -- Python
+    "mfussenegger/nvim-dap-python",
+    "rcarriga/nvim-dap-ui",
+    "nvim-neotest/neotest",
+  -- Testin Ends
   {"anuvyklack/keymap-amend.nvim"},
   -- Search and replace across the project
   {

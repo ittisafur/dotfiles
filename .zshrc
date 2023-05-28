@@ -89,13 +89,6 @@ if [ "$(command -v bat)" ]; then
 fi
 # Moving cat with bat End
 
-# color ls config
-if [ "$(command -v colorls)" ]; then
-  unalias -m 'ls'
-  alias ls='colorls $1'
-fi
-# color ls config End
-
 # Adding Android Configurations
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=~/Library/Android/sdk/tools:$PATH
