@@ -44,6 +44,7 @@ require('plug-settings.tailwindcss')
 require('autocommands')
 -- Which Keys
 require('plug-settings.whichkey')
+lvim.builtin.which_key.setup.plugins.presets.z = true
 
 -- Nvim Tree
 -- require('plug-settings.nvim-tree')
