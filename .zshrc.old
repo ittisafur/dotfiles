@@ -47,21 +47,6 @@ alias laravel="~/.config/composer/vendor/bin/laravel"
 
 alias snips="~/.config/vim/snips"
 export PATH=/opt/firefox/firefox:$PATH
-codi() {
-   local syntax="${1:-javascript}"
-   shift
-   nvim -c \
-     "let g:startify_disable_at_vimenter = 1 |\
-     set bt=nofile ls=0 noru nonu nornu |\
-     hi CodiVirtualText guifg=red
-     hi ColorColumn ctermbg=NONE |\
-     hi VertSplit ctermbg=NONE |\
-     hi NonText ctermfg=0 |\
-     Codi $syntax" "$@"
-}
-# Rbenv Ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 # Go lang
 export PATH="$HOME/go/bin:$PATH"
@@ -73,14 +58,6 @@ export PATH=~/.local/bin:$PATH
 # Flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-
-# Ptsh Start
-# alias ls="ptls"
-# alias pwd="ptpwd"
-alias mkdir="ptmkdir"
-alias touch="pttouch"
-# alias cp="ptcp"
-# PTsh End
 
 # Moving cat with bat
 if [ "$(command -v bat)" ]; then
@@ -102,17 +79,10 @@ export PATH=$PATH:/usr/lib/postgresql/13/bin
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
-# Kitty specific config
-#export KITTY_CONFIG_DIR=$HOME/.config/kitty
-#export KITTY_THEME_DIR=$KITTY_CONFIG_DIR/themes
-alias icat="kitty +kitten icat"
-alias kittyrc="lvim ~/.config/kitty/kitty.conf"
 # Deno 
 export DENO_DIR=$HOME/.deno
 export PATH=$DENO_DIR/bin:$PATH
 
-#i3
-alias i3config="lvim ~/.config/i3/config"
 # go 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -131,6 +101,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/undefined/perl5"; export PERL_MM_OPT;
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 

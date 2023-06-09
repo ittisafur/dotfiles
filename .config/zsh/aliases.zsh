@@ -41,5 +41,5 @@ alias lvimrc="lvim $HOME/.config/lvim/config.lua"
 # Nvim configuration
 
 # Update and Upgrade Packages
-alias upupgrade="sudo apt-get update && sudo apt-get upgrade"
+alias autoupdate="sudo apt-get update && sudo apt-get upgrade"
 
