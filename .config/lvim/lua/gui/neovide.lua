@@ -1,5 +1,5 @@
 vim.g.neovide_fullscreen = true
--- vim.g.neovide_transparency = 0.5
+vim.g.neovide_transparency = 0.5
 
 
 -- Takes up a bit of memory

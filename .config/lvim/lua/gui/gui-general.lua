@@ -1,4 +1,6 @@
-vim.o.guifont = "MonoLisa:h9:antialias=true:autocmd=false"
+-- vim.o.guifont = "MonoLisa:h7:antialias=true:autocmd=false"
+-- Add Firacode Nerd Font
+vim.o.guifont = "Firacode:h9"
 vim.g.colors_name = "nord"
 
 -- vim.opt.guifont = "Roboto Mono Bold:h10"

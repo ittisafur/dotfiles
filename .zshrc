@@ -9,21 +9,12 @@ plug "zsh-users/zsh-syntax-highlighting"
 autoload -Uz compinit
 compinit
 
-# Load Aliases
-plug "$HOME/.config/zsh/aliases.zsh"
-
 # Load Functions 
-plug "$HOME/.config/zsh/functions.zsh"
+plug "$HOME/.config/zsh/functions/main.zsh"
 
-# NVM for Node Management
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Load Paths
+plug "$HOME/.config/zsh/paths.zsh"
 
-# Rbenv for Ruby Management
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Kitty specific config
-alias icat="kitty +kitten icat"
+# Load Aliases
+plug "$HOME/.config/zsh/aliases/main.zsh"
 

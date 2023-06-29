@@ -1,8 +1,23 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
-export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
-export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
-exec neovide --maximized --multigrid --frame full -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+# SERVICE="Neovide"
+# if pgrep -x "$SERVICE" >/dev/null; then
+#     echo "$SERVICE is already running"
+#     exit 1
+# else
+#     export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
+#     export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
+#     export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
+#     cd $HOME
+#     exec neovide --maximized --multigrid --frame full -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+# fi
+
+# exec neovide --maximized --multigrid --frame full -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
 # exec neovide --maximized --multigrid --noidle -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
 # exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-$HOME/.config/lvim}"
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-$HOME/.local/share/lunarvim}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-$HOME/.cache/lvim}"
+
+exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"

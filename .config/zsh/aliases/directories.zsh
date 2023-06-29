@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-
 # Directories
 alias Transcend="cd /media/undefined/Transcend"
 alias Works="cd /media/undefined/Works"
@@ -30,16 +27,6 @@ alias React="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React"
 alias Wordpress="cd /media/undefined/Works/Codes\ and\ Projects/Wordpress"
 alias Ytp="pipe-viewer -n --no-video --player=mpvt"
 alias Templates="cd /media/undefined/Works/Templates"
-
-
-# Manage dotfiles
+alias Golang="cd /media/undefined/Works/Codes\ and\ Projects/Golang"
+alias Symfony="cd /media/undefined/Works/Codes\ and\ Projects/PHP/Symfony"
 alias DFS=$HOME/dotfiles/
-
-# Lvim configuration
-alias lvimrc="lvim $HOME/.config/lvim/config.lua"
-
-# Nvim configuration
-
-# Update and Upgrade Packages
-alias autoupdate="sudo apt-get update && sudo apt-get upgrade"
-

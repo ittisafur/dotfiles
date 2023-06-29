@@ -18,14 +18,29 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu exec wofi --show drun 
+
+# Opacity
+for_window [class="^.*"] opacity 0.95
+for_window [app_id="^.*"] opacity 0.95
+
+# All about Gaps and Borders
+gaps inner 5
+gaps outer 5
+default_border none
+default_floating_border none
+titlebar_padding 1
+titlebar_border_thickness 0
+smart_borders on
+
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/Wallpapers/lowfi.jpg fill
 #
 # Example configuration:
 #
@@ -33,18 +48,40 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+
+## Setup Monitor for DVI-D-1 as secondary and HDMI-A-1 as primary with refresh rate of 60Hz
+output HDMI-A-1 mode 1920x1080@60Hz position 0,0
+output DVI-D-1 mode 1366x768@60Hz position 1920,0
+
+workspace 1 output HDMI-A-1
+workspace 2 output HDMI-A-1
+workspace 3 output HDMI-A-1
+workspace 4 output HDMI-A-1
+workspace 5 output HDMI-A-1
+
+workspace 6 output DVI-D-1
+workspace 7 output DVI-D-1
+workspace 8 output DVI-D-1
+workspace 9 output DVI-D-1
+workspace 10 output DVI-D-1
+
+# Startup applications
+exec_always --no-startup-id dunst
+exec --no-startup-id google-chrome
+exec_always --no-startup-id mailspring
+
+# Force Application to be on Specific Workspace
+assign [class="Google-chrome"]  workspace 1
+assign [class="Mailspring"]  workspace 8
+assign [class="spotify"]  workspace 10
+
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-
 exec swayidle -w \
-         timeout 30 'swaylock -f -c 000000' \
-         timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -143,6 +180,7 @@ exec swayidle -w \
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
 #
 # Layout stuff:
 #
@@ -205,12 +243,17 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Shuts down the computer
+bindsym $mod+Shift+s exec systemctl poweroff
+
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
+    swaybar_command waybar
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
