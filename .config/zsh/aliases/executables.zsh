@@ -9,3 +9,6 @@ alias lvimrc="lvim $HOME/.config/lvim/config.lua"
 
 # Update and Upgrade Packages
 alias autoupdate="sudo apt-get update && sudo apt-get upgrade -y"
+
+# Source zshrc
+alias szsh="source ~/.zshrc"
