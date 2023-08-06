@@ -19,5 +19,9 @@ export LUNARVIM_CONFIG_DIR="$HOME/.config/lvim"
 export LUNARVIM_RUNTIME_DIR="$HOME/.local/share/lunarvim"
 export LUNARVIM_CACHE_DIR="$HOME/.cache/lunarvim"
 
-# Go Path
+# Go and g Paths
 export PATH=$PATH:/usr/local/go/bin
+export GOROOT=$HOME/.local/share/golang
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH";
+# alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g

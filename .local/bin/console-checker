@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Array to store the filenames
+declare -a found_files=()
+
+# Run find and grep command to check for console.log
+while IFS= read -r -d '' file; do
+  found_files+=("$file")
+done < <(find . -type d \( -name node_modules -o -name build -o -name dist \) -prune -o -type f -exec grep -l 'console\.log' {} \;)
+
+# Check if any files were found
+if [ ${#found_files[@]} -gt 0 ]; then
+  echo "Error: Found console.log statements in the following files:"
+  for file in "${found_files[@]}"; do
+    echo "$file"
+  done
+  echo "Please remove them before committing."
+  exit 1
+else
+  echo "No console.log statements found."
+  yarn format
+  yarn lint:fix
+  yarn build
+fi
