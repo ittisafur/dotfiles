@@ -19,7 +19,6 @@ vim.opt.foldenable = false -- if this option is true and fold method option is o
 lvim.builtin.bufferline.active = true
 -- lvim.log.level = false -- Turn to "debug" while debugging
 lvim.debug = true
-lvim.format_on_save = false
 
 vim.opt.wrap = true
 vim.opt.relativenumber = true
@@ -39,4 +38,4 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
 
 -- Format on save
-lvim.format_on_save = false
+lvim.format_on_save.enabled = true

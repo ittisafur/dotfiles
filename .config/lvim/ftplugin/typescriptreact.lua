@@ -1,3 +1,5 @@
+require("lvim.lsp.manager").setup("tsserver")
+
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
@@ -6,3 +8,8 @@ formatters.setup {
     -- args = { "--single-quote", "--jsx-single-quote" },
   },
 }
+
+vim.cmd([[
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescriptreact
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascriptreact
+]])

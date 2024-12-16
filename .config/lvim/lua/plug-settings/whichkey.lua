@@ -29,3 +29,13 @@ lvim.builtin.which_key.mappings["C"] = {
 }
 
 
+lvim.builtin.which_key.mappings["d"] = {
+  name = "Debug",
+  t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+  c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+  i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+  o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+  u = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
+  x = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+  r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle REPL" },
+}

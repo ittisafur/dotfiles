@@ -1,4 +1,4 @@
--- if you don't want all the parsers change this to a table of the ones you want
+
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "html",
@@ -32,10 +32,14 @@ lvim.builtin.treesitter.ensure_installed = {
   "http"
 }
 
+-- If you want to ignore certain parsers
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
 
--- nvim-ts-rainbow settings
+-- Enable Tree-sitter based highlighting
+lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.highlight.additional_vim_regex_highlighting = false
+
+-- Enable nvim-ts-rainbow (if you use it for rainbow parentheses)
 lvim.builtin.treesitter.rainbow = {
   enable = true,
   extended_mode = true,

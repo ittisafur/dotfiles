@@ -1,3 +1,7 @@
+# Composer Global Path
+export COMPOSER_HOME="$HOME/.config/composer"
+export PATH="$COMPOSER_HOME/vendor/bin:$PATH"
+
 # PNPM Paths
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -25,3 +29,7 @@ export GOROOT=$HOME/.local/share/golang
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH";
 # alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+# Anaconda
+export PATH="$HOME/anaconda3/bin:$PATH"
+

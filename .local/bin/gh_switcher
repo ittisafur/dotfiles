@@ -1,0 +1,19 @@
+#!/bin/bash
+gh_user="${1:-Nothing}"
+
+if [ "$gh_user" == 'Personal' ]; then
+  ssh-add -D
+  git config --global user.email "ittisafur@gmail.com"
+  ssh-add ~/.ssh/id_rsa
+elif [ "$gh_user" == 'Firstrx' ]; then
+  ssh-add -D
+  git config --global user.email "Super.skystar92@gmail.com"
+  ssh-add ~/.ssh/id_firstrx
+else
+  echo 'Nothing was applied'
+  exit 1
+fi
+echo "$gh_user applied!"
+git config user.email
+ssh -T git@github.com
+exit 0

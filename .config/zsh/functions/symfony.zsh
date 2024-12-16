@@ -23,7 +23,7 @@ sfcd(){
 }
 
 # Migrate database with Doctorine
-sfm(){
+sfmm(){
   sf doctrine:migrations:migrate
 }
 
@@ -34,7 +34,7 @@ sfr(){
 
 # Server start
 sfs(){
-  symfony server:start
+  sf serve -d
 }
 
 # Symfony Functions Ends

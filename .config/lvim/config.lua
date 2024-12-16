@@ -38,6 +38,7 @@ require('plug-settings.emmet')
 
 -- Tailwindcss Settings
 require('plug-settings.tailwindcss')
+require('lsp.rust')
 
 
 -- Autocommands
@@ -48,3 +49,13 @@ lvim.builtin.which_key.setup.plugins.presets.z = true
 
 -- Nvim Tree
 -- require('plug-settings.nvim-tree')
+require('dap.js')
+require('dap.dap-ui')
+
+-- Ensure tsserver is set up for JavaScript and TypeScript React
+require("lvim.lsp.manager").setup("tsserver", {
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+})
+
+-- Setup Tailwind CSS LSP
+require("lvim.lsp.manager").setup("tailwindcss")

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+read -p "Enter GTID purged option (OFF/AUTO/ON): " option
+read -p "Enter database name: " database_name
+read -p "Enter host: " host
+read -p "Enter port: " port
+read -p "Enter output db_name for the SQL file: " db_name
+read -p "Enter MySQL username: " username
+
+echo "Enter password for the MySQL user '$username':"
+read -s password
+
+mysqldump --set-gtid-purged=$option -u $username -p"$password" $database_name -R -e --triggers --host=$host --port=$port --single-transaction | pv > $db_name.sql
+
+echo "Database dump completed."

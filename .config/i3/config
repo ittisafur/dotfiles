@@ -179,22 +179,22 @@ bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
-# bindsym $mod+Shift+7 move container to workspace $ws7
-# bindsym $mod+Shift+8 move container to workspace $ws8
-# bindsym $mod+Shift+9 move container to workspace $ws9
-# bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Forcing Application to be on Specific Workspace
 # use `xprop WM_CLASS` to identify the application
 assign [class="Google-chrome"] $ws1
 # Assign Neovide on $ws2
 # assign [class="neovide"] $ws2
-# assign [class="Gnome-terminal"] $ws3
 # assign [class="Element"] $ws4 
 # assign [class="Caprine"] $ws4 
-assign [class="Mailspring"] $ws6
-assign [class="notion-app-enhanced"] $ws6
 assign [class="Spotify"] $ws6
+assign [class="Trello Desktop"] $ws6
+assign [class="akregator"] $ws6
+assign [class="Mailspring"] $ws7
 
 
 # Keybindings
@@ -203,7 +203,8 @@ bindsym Control+q exec flameshot gui
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id clipit
 # exec_always feh --bg-scale ~/Pictures/Wallpapers/burningmidnight2.png #https://www.behance.net/gallery/112645653/Burning-Midnight
-exec_always feh --bg-scale ~/Pictures/Wallpapers/lowfi.jpg
+# exec_always ~/scripts/change_wallpaper.sh
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/cyberpunk.jpg
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf #Picom is a compositor for X11
 exec --no-startup-id dunst
 # exec --no-startup-id polybar
@@ -211,8 +212,8 @@ exec google-chrome # Google Chrome
 # exec lvide # Lvide, Neovide
 # exec --no-startup-id element-desktop # Element
 # exec caprine # Caprine
-exec mailspring #Mailspring
-exec_always --no-startup-id notion-app-enhanced #Mailspring
+exec mailspring --password-store="gnome-libsecret"
+exec --no-startup-id trello-desktop # Trello
 # exec --no-startup-id xrandr --output VGA-0 --auto --right-of HDMI-0 &
 exec --no-startup-id xrandr --output DVI-D-0 --auto --right-of HDMI-A-0 &
 # exec --no-startup-id pasystray #System tray
