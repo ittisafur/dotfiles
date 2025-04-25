@@ -30,6 +30,12 @@ export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH";
 # alias g="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
+# Android Studio Settings
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH"
+
 # Anaconda
 export PATH="$HOME/anaconda3/bin:$PATH"
 
+# LVIM
+export PATH=$PATH:~/.local/share/nvim/mason/bin

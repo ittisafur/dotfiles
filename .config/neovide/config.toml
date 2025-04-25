@@ -1,0 +1,18 @@
+theme = "dark"
+frame = "full"
+idle = true
+maximized = true
+title-hidden = true
+vsync = true
+
+[font]
+normal = ["JetBrainsMono Nerd Font"]
+size = 10.5
+hinting = "full"
+edging = "antialias"
+
+[box-drawing]
+mode = "native"
+
+[box-drawing.sizes]
+default = [2, 4]

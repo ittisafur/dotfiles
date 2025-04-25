@@ -1,31 +1,42 @@
-local is_in_package_json = function(field)
-	if vim.fn.filereadable(vim.fn.getcwd() .. "/package.json") ~= 0 then
-		local package_json = vim.fn.json_decode(vim.fn.readfile("package.json"))
-		if package_json[field] ~= nil then
-			return true
-		end
-		local dev_dependencies = package_json["devDependencies"]
-		if dev_dependencies ~= nil and dev_dependencies[field] ~= nil then
-			return true
-		end
-		local dependencies = package_json["dependencies"]
-		if dependencies ~= nil and dependencies[field] ~= nil then
-			return true
-		end
-	end
+local function is_in_package_json(field)
+	local path = vim.fn.getcwd() .. "/package.json"
+	if vim.fn.filereadable(path) == 0 then return false end
+
+	local ok, content = pcall(vim.fn.readfile, path)
+	if not ok then return false end
+
+	local package_json = vim.fn.json_decode(content)
+	if not package_json then return false end
+
+	if package_json[field] then return true end
+	if package_json.devDependencies and package_json.devDependencies[field] then return true end
+	if package_json.dependencies and package_json.dependencies[field] then return true end
+
 	return false
 end
 
---
--- Does current project contain tailwindcss configuration
---
-local project_has_tailwindcss_dependency = function()
-	return (vim.fn.glob("tailwind*") ~= "" or is_in_package_json("tailwindcss"))
+local function has_tailwind_config()
+	return vim.fn.filereadable("tailwind.config.js") == 1
+		or vim.fn.filereadable("tailwind.config.ts") == 1
 end
 
---- Setup tailwindcss LSP if project has tailwindcss configuration
-if project_has_tailwindcss_dependency() == true then
-	require("lvim.lsp.manager").setup("tailwindcss")
+local function project_has_tailwindcss_dependency()
+	return is_in_package_json("tailwindcss") or has_tailwind_config()
+end
+
+-- LSP Setup
+if project_has_tailwindcss_dependency() then
+	print("✅ Tailwind CSS detected in project. Starting LSP setup...")
+
+	require("lvim.lsp.manager").setup("tailwindcss", {
+		filetypes = {
+			"html", "css",
+			"javascript", "javascriptreact",
+			"typescript", "typescriptreact",
+		},
+	})
+
 else
-	vim.list_extend(lvim.lsp.override, { "tailwindcss" })
+	print("❌ Tailwind CSS not found. Skipping setup.")
+	table.insert(lvim.lsp.automatic_configuration.skipped_servers, "tailwindcss")
 end

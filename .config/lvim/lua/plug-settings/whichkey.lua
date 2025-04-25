@@ -11,21 +11,21 @@ lvim.builtin.which_key.mappings["t"] = {
 -- JsDoc and PhpDoc Modded
 lvim.builtin.which_key.mappings["D"] = {
   name = "Doc Block",
-  j = {"<cmd>JsDoc<cr>", "Js Doc Block"},
-  p = {"<cmd>call PhpDocSingle()<cr>", "Php Doc Single"}
+  j = { "<cmd>JsDoc<cr>", "Js Doc Block" },
+  p = { "<cmd>call PhpDocSingle()<cr>", "Php Doc Single" }
 }
 
 -- Zen Mode
 lvim.builtin.which_key.mappings["z"] = {
   name = "zen mode",
-  m = {"<cmd>ZenMode<cr>", "zen mode"}
+  m = { "<cmd>ZenMode<cr>", "zen mode" }
 }
 
 -- Copilot
 lvim.builtin.which_key.mappings["C"] = {
   name = "Copilot",
-  e = {"<cmd>Copilot enable<cr>", "Enable Copilot"},
-  d = {"<cmd>Copilot disable<cr>", "Diable Copilot"}
+  e = { "<cmd>Copilot enable<cr>", "Enable Copilot" },
+  d = { "<cmd>Copilot disable<cr>", "Diable Copilot" }
 }
 
 
@@ -38,4 +38,18 @@ lvim.builtin.which_key.mappings["d"] = {
   u = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
   x = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
   r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle REPL" },
+}
+
+lvim.builtin.which_key.mappings["B"] = {
+  name = "Buffers",
+  p = { "<cmd>BufferLineTogglePin<CR>", "Toggle Pin" },
+  ["["] = { "<cmd>BufferLineMovePrev<CR>", "Move Left" },
+  ["]"] = { "<cmd>BufferLineMoveNext<CR>", "Move Right" },
+  s = { "<cmd>BufferLineSortByExtension<CR>", "Sort by Extension" },
+  d = { "<cmd>BufferLineSortByDirectory<CR>", "Sort by Directory" },
+  o = { "<cmd>BufferLineCloseOthers<CR>", "Close Others" },
+  l = { "<cmd>BufferLineCloseLeft<CR>", "Close Left" },
+  r = { "<cmd>BufferLineCloseRight<CR>", "Close Right" },
+  c = { "<cmd>bdelete<CR>", "Close Current" },
+  f = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
 }

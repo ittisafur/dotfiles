@@ -27,6 +27,10 @@ gaps outer 8
 
 # Run Rofi
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
+
+# Run 
+bindsym $mod+slash exec "/usr/bin/splatmoji copypaste"
+
 # bindsym $mod+s exec --no-startup-id powermenu_t2
 
 # Font for window titles. Will also be used by the bar unless a different font

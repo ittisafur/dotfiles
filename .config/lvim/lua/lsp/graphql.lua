@@ -1,14 +1,5 @@
-local graphql_opts ={
-  filetypes = {
-      "vue",
-      "javascript",
-      "typescript",
-      "typescriptreact",
-      "javascriptreact",
-      "javascript.jsx",
-      "php",
-  }
-}
--- require("lvim.lsp.manager").setup("graphql", graphql_opts)
-vim.list_extend(lvim.lsp.override, { "graphql" })
-
+require("lvim.lsp.manager").setup("graphql", {
+  cmd = { "graphql-lsp", "server", "-m", "stream" },
+  filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  root_dir = require("lspconfig.util").root_pattern(".git", "package.json", ".graphqlconfig", ".graphqlrc"),
+})

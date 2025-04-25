@@ -2,7 +2,7 @@ lvim.plugins = {
   -- Testin Starts
   {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,  -- Ensure it is not lazily loaded
+    lazy = false, -- Ensure it is not lazily loaded
     build = ":TSUpdate",
   },
   -- DB Reader
@@ -32,7 +32,7 @@ lvim.plugins = {
     "rcarriga/nvim-dap-ui",
   },
   {
-    "theHamsta/nvim-dap-virtual-text"  
+    "theHamsta/nvim-dap-virtual-text"
   },
   {
     "nvim-neotest/neotest",
@@ -124,8 +124,8 @@ lvim.plugins = {
   -- Docs Suggested so yea. Need to look into it
   {
     "folke/trouble.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons" },  -- Replaced 'requires' with 'dependencies'
-    cmd = "TroubleToggle",  -- Lazy load on 'TroubleToggle' command
+    dependencies = { "kyazdani42/nvim-web-devicons" }, -- Replaced 'requires' with 'dependencies'
+    cmd = "TroubleToggle",                             -- Lazy load on 'TroubleToggle' command
   },
   -- JSDOC for Js and Ts
   {

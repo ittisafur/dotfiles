@@ -1,6 +1,8 @@
 # Directories
 alias Transcend="cd /media/undefined/Transcend"
 alias Works="cd /media/undefined/Works"
+alias HRHFE="cd /home/undefined/Works/NextGen/home-reading-helper/home-reading-helper-frontend"
+alias HRHBE="cd /home/undefined/Works/NextGen/home-reading-helper/home-reading-helper-backend"
 alias Nexify="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React/practice/nexify/"
 alias Techdiary="cd /media/undefined/Works/Codes\ and\ Projects/Open\ Source/kingRayhan/Tech\ Diary/"
 alias Node="cd /media/undefined/Works/Codes\ and\ Projects/Node"
@@ -30,7 +32,8 @@ alias Wordpress="cd /media/undefined/Works/Codes\ and\ Projects/Wordpress"
 alias Ytp="pipe-viewer -n --no-video --player=mpvt"
 alias Templates="cd /media/undefined/Works/Templates"
 alias Golang="cd /media/undefined/Works/Codes\ and\ Projects/Golang"
-alias Symfony="cd /media/undefined/Works/Codes\ and\ Projects/PHP/Symfony"
+alias Python="cd /media/undefined/Works/Codes\ and\ Projects/Python"
+alias SaaS="cd /media/undefined/Works/Codes\ and\ Projects/Personal/SaaS"
 alias DFS=$HOME/dotfiles/
 alias Templates="cd /media/undefined/Works/Templates"
 alias ReactTrade="cd /media/undefined/Works/Codes\ and\ Projects/Javascript/React/projects/react-trade"
