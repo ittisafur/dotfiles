@@ -1,40 +1,76 @@
 local util = require("lspconfig.util")
 
--- detect if tailwind is in package.json
-local function has_pkg_dep(name)
-  local pkg = vim.fn.json_decode(vim.fn.readfile("package.json", nil, true) or "{}")
-  return (pkg.dependencies  and pkg.dependencies[name])
-      or (pkg.devDependencies and pkg.devDependencies[name])
+local function is_in_package_json(field)
+  local path = vim.fn.getcwd() .. "/package.json"
+  if vim.fn.filereadable(path) == 0 then return false end
+
+  local ok, content = pcall(vim.fn.readfile, path)
+  if not ok then return false end
+
+  local package_json = vim.fn.json_decode(content)
+  if not package_json then return false end
+
+  if package_json[field] then return true end
+  if package_json.devDependencies and package_json.devDependencies[field] then return true end
+  if package_json.dependencies and package_json.dependencies[field] then return true end
+
+  return false
 end
 
--- detect if there's a tailwind.config.* file
-local function has_config_file()
-  return util.root_pattern(
+local function has_tailwind_config()
+  return vim.fn.filereadable("tailwind.config.js") == 1
+      or vim.fn.filereadable("tailwind.config.ts") == 1
+end
+
+local function project_has_tailwindcss_dependency()
+  return is_in_package_json("tailwindcss") or has_tailwind_config()
+end
+
+-- LSP Setup
+if project_has_tailwindcss_dependency() then
+  print("✅ Tailwind CSS detected in project. Starting LSP setup...")
+
+  require("lvim.lsp.manager").setup("tailwindcss", {
+
+    cmd       = { "tailwindcss-language-server", "--stdio" },
+    filetypes = {
+      "html", "css",
+      "javascript", "javascriptreact",
+      "typescript", "typescriptreact",
+    },
+    root_dir  = util.root_pattern(
+      "tailwind.config.js",
+      "tailwind.config.cjs",
+      "tailwind.config.mjs",
+      "tailwind.config.ts",
+      "postcss.config.js",
+      "postcss.config.cjs",
+      "package.json" -- <= add this
+    ),
+  })
+else
+  print("❌ Tailwind CSS not found. Skipping setup.")
+  table.insert(lvim.lsp.automatic_configuration.skipped_servers, "tailwindcss")
+end
+
+-- lua/user/servers/tailwindcss.lua
+local util = require("lspconfig.util")
+
+require("lvim.lsp.manager").setup("tailwindcss", {
+  cmd       = { "tailwindcss-language-server", "--stdio" },
+  filetypes = {
+    "html", "css", "scss",
+    "javascript", "javascriptreact",
+    "typescript", "typescriptreact",
+    "vue", "svelte", "astro", "mdx",
+  },
+  root_dir  = util.root_pattern(
     "tailwind.config.js",
     "tailwind.config.cjs",
     "tailwind.config.mjs",
-    "tailwind.config.ts"
-  )(vim.loop.cwd()) ~= nil
-end
-
-if has_pkg_dep("tailwindcss") or has_config_file() then
-  require("lvim.lsp.manager").setup("tailwindcss", {
-    cmd      = { "tailwindcss-language-server", "--stdio" },
-    filetypes = {
-      "html", "css", "scss",
-      "javascript", "javascriptreact",
-      "typescript", "typescriptreact",
-      "astro", "svelte", "vue", "mdx",
-    },
-    root_dir = function(fname)
-      return util.root_pattern(
-        "tailwind.config.js",
-        "tailwind.config.cjs",
-        "tailwind.config.mjs",
-        "tailwind.config.ts",
-        "postcss.config.js",
-        "postcss.config.mjs",
-        "package.json"
-      )(fname)
-    end,
-    on_attach = function(_,
+    "tailwind.config.ts",
+    "postcss.config.js",
+    "postcss.config.cjs",
+    "package.json"
+  ),
+})

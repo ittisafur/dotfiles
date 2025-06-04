@@ -1,0 +1,5 @@
+#!/bin/bash
+
+APPIMAGE_DIR="/home/undefined/AppImages"
+APPIMAGE=$(ls "$APPIMAGE_DIR"/cursor-*.AppImage | sort | tail -n 1)
+exec "$APPIMAGE" --no-sandbox "$@"

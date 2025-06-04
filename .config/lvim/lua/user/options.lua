@@ -11,6 +11,9 @@ vim.opt.wrap           = true
 -- Mouse support
 vim.opt.mouse          = "a"
 
+-- Allow swapping buffers without unloading the old one
+vim.opt.hidden         = true
+
 -- Folding: use indent-based folding for all your frontend filetypes
 vim.opt.foldmethod     = "indent"
 vim.opt.foldlevelstart = 99

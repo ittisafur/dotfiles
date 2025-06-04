@@ -19,3 +19,4 @@ alias gcp-jesse="gcloud config configurations activate home-reading-helper"
 
 # Source zshrc
 alias szsh="source ~/.zshrc"
+
